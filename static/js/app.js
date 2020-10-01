@@ -36,6 +36,9 @@ function handleChange (event) {
     console.log(inputDate)
     console.log(formatDate)
     
+    // Clean table from previous results
+    selTable.selectAll("tr").remove()
+    
     // Loop through data and filter based on date
     var results = [];
     tableData.forEach(entry => {
