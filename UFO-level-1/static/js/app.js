@@ -1,27 +1,6 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
-
-//Select first two elements
-// var obsArray = [];
-// for (i = 0; i < 3; i++) {
-//     obsArray.push(Object.values(tableData[i]));
-// }
-// console.log(obsArray);
-
-// var newArray = [];
-// for (i = 0; i < 3; i++) {
-//     newArray.push(tableData[i]);
-// }
-
-// var selTable = d3.select("tbody");
-//  obsArray.forEach(entry => {
-//     var tableRow = selTable.append("tr");
-//     entry.forEach(d => {
-//          tableRow.append("td").text(d);
-//      })
-//  })
 
 // Create handlers
 var selTable = d3.select("tbody");
@@ -32,10 +11,7 @@ var input = d3.select(".form-control");
 function handleChange (event) {
     var inputDate = d3.event.target.value
     var formatDate = new Date(inputDate)
-    
-    console.log(inputDate)
-    console.log(formatDate)
-    
+
     // Clean table from previous results
     selTable.selectAll("tr").remove()
     
@@ -66,3 +42,24 @@ function handleChange (event) {
 
 input.on("change", handleChange);
 
+
+
+//Select first two elements
+// var obsArray = [];
+// for (i = 0; i < 3; i++) {
+//     obsArray.push(Object.values(tableData[i]));
+// }
+// console.log(obsArray);
+
+// var newArray = [];
+// for (i = 0; i < 3; i++) {
+//     newArray.push(tableData[i]);
+// }
+
+// var selTable = d3.select("tbody");
+//  obsArray.forEach(entry => {
+//     var tableRow = selTable.append("tr");
+//     entry.forEach(d => {
+//          tableRow.append("td").text(d);
+//      })
+//  })
