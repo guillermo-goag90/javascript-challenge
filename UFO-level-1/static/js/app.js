@@ -21,7 +21,6 @@ function handleChange (event) {
         var entryDate = new Date(entry.datetime);
 
         if (entryDate.getTime() == formatDate.getTime()) {
-            console.log("true")
             results.push(entry);
         }
     })
