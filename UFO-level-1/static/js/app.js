@@ -20,7 +20,8 @@ function handleChange (event) {
     tableData.forEach(entry => {
         var entryDate = new Date(entry.datetime);
 
-        if (entryDate <= formatDate) {
+        if (entryDate.getTime() == formatDate.getTime()) {
+            console.log("true")
             results.push(entry);
         }
     })
