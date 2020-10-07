@@ -75,12 +75,12 @@ console.log(filters)
 
 function filterData () {
     // Clean filteredData table from previous filters (reboot) 
-    //let filteredData = tableData;
+    let filteredData = tableData;
 
     //
     Object.values(filters).forEach(value => {
         console.log(value)
-        //var outputdData = filteredData.filter(value => value[i] == value)
+        filteredData = filteredData.filter(row => row.value == value)
     })
 }
 
